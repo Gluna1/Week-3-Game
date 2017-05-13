@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Psychic Game</h1>
+    <br>
+    <div>Guess what letter I'm thinking of</div>
+    <br>
+    <div>Wins: <div id="wins"></div></div>
+    <br>
+    <div>Losses: <div id="losses"></div></div>
+    <br>
+    <div>Guesses Left: <div id="guessesLeft"></div></div>
+    <br>
+    <div>Your Guesses so far: <div id="guessesTotal"></div></div>
+
+
+<script>
+    var numArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    var wins = 0;
+    var losses = 0;
+    var guessesLeft = 10;
+    var guessesTotal = 0;
+    var RNG = Math.floor(Math.random()*25);
+    var userGuess = "O";
+    var compGuess = numArray[RNG];
+    console.log(compGuess);
+    var winsText = document.getElementById("wins");
+    var lossesText = document.getElementById("losses");
+    var gLText = document.getElementById("guessLeft");
+    var gTText = document.getElementById("guessesTotal");
+    winsText = wins;
+    console.log(winsText)
+
+
+    
+    if(userGuess === compGuess) {
+        wins += 1;
+    }
+    else{
+        guessesLeft -= 1;
+    }
+    if(guessesLeft === 0) {
+        losses += 1; 
+    }
+
+    
+    
+
+    
+
+
+
+    
+
+    
+
+
+
+    
+
+
+</script>
+
+</body>
+</html>
